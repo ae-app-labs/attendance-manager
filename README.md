@@ -7,4 +7,4 @@ Archived source code for a college attendance management software developed in p
 
 ## screenshot
 Landing page design screenshot
-[screenshot](assets/screenshot.png)
+![screenshot](assets/screenshot.png)
