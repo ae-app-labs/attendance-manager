@@ -1,0 +1,162 @@
+-- phpMyAdmin SQL Dump
+-- version 2.6.4-pl4
+-- http://www.phpmyadmin.net
+-- 
+-- Host: localhost
+-- Generation Time: Mar 19, 2008 at 01:26 PM
+-- Server version: 5.0.17
+-- PHP Version: 5.1.1
+-- 
+-- Database: `db_atmgr`
+-- 
+CREATE DATABASE `db_atmgr` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE db_atmgr;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `department`
+-- 
+
+CREATE TABLE `department` (
+  `dept_id` int(10) NOT NULL auto_increment,
+  `code` char(4) NOT NULL,
+  `dept_name` varchar(32) NOT NULL,
+  `hod` int(10) NOT NULL,
+  PRIMARY KEY  (`dept_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+-- 
+-- Dumping data for table `department`
+-- 
+
+INSERT INTO `department` VALUES (1, 'CSE', 'Computer Science & Engineering', 0);
+INSERT INTO `department` VALUES (2, 'EEE', 'Electrical', 0);
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `staff_paper`
+-- 
+
+CREATE TABLE `staff_paper` (
+  `pp_id` int(10) NOT NULL auto_increment,
+  `code` char(8) NOT NULL,
+  `subject_name` varchar(32) NOT NULL,
+  `dept_id` int(10) NOT NULL,
+  `class_id` int(10) NOT NULL,
+  `total_hours` int(16) NOT NULL,
+  PRIMARY KEY  (`pp_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+-- 
+-- Dumping data for table `staff_paper`
+-- 
+
+INSERT INTO `staff_paper` VALUES (1, 'r801', 'ppl', 1, 7, 0);
+INSERT INTO `staff_paper` VALUES (2, 'r802', 'sic', 1, 7, 0);
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `stud_attendance`
+-- 
+
+CREATE TABLE `stud_attendance` (
+  `date` varchar(32) NOT NULL,
+  `stud_id` int(10) NOT NULL,
+  `h1` int(10) NOT NULL,
+  `h2` int(10) NOT NULL,
+  `h3` int(10) NOT NULL,
+  `h4` int(10) NOT NULL,
+  `h5` int(10) NOT NULL,
+  `h6` int(10) NOT NULL,
+  `status` char(3) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table `stud_attendance`
+-- 
+
+INSERT INTO `stud_attendance` VALUES ('19-Mar-2008', 1, 0, 1, 1, 1, 1, 1, 'P');
+INSERT INTO `stud_attendance` VALUES ('19-Mar-2008', 2, 1, 1, 1, 1, 1, 1, 'P');
+INSERT INTO `stud_attendance` VALUES ('19-Mar-2008', 3, 0, 1, 1, 1, 1, 1, 'P');
+INSERT INTO `stud_attendance` VALUES ('19-Mar-2008', 4, 1, 1, 1, 1, 1, 1, 'P');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `stud_classes`
+-- 
+
+CREATE TABLE `stud_classes` (
+  `class_id` int(10) NOT NULL auto_increment,
+  `class_name` varchar(8) NOT NULL,
+  PRIMARY KEY  (`class_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `user_staff`
+-- 
+
+CREATE TABLE `user_staff` (
+  `staff_id` int(10) NOT NULL auto_increment,
+  `dept` int(10) NOT NULL,
+  `staff_name` varchar(32) NOT NULL,
+  `password` varchar(32) NOT NULL,
+  `level` int(10) NOT NULL,
+  PRIMARY KEY  (`staff_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+-- 
+-- Dumping data for table `user_staff`
+-- 
+
+INSERT INTO `user_staff` VALUES (1, 1, 'test', MD5('test'), 4);
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `user_student`
+-- 
+
+CREATE TABLE `user_student` (
+  `stud_id` int(10) NOT NULL auto_increment,
+  `dept` int(10) NOT NULL,
+  `stud_name` varchar(32) NOT NULL,
+  `class_id` int(10) NOT NULL,
+  `reg_no` varchar(10) NOT NULL,
+  PRIMARY KEY  (`stud_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+-- 
+-- Dumping data for table `user_student`
+-- 
+
+INSERT INTO `user_student` VALUES (1, 1, 'Adersh V', 7, '96091');
+INSERT INTO `user_student` VALUES (2, 1, 'Anjaly', 7, '96092');
+INSERT INTO `user_student` VALUES (3, 1, 'Akhil V', 7, '96093');
+INSERT INTO `user_student` VALUES (4, 1, 'Annapoorna', 7, '96094');
+
+
+CREATE TABLE `user_adminn` (
+`aid` INT( 8 ) NOT NULL AUTO_INCREMENT ,
+`aname` VARCHAR( 32 ) NOT NULL ,
+`apass` VARCHAR( 32 ) NOT NULL ,
+PRIMARY KEY ( `aid` ) 
+) TYPE = MYISAM ;
+
+
+
+CREATE TABLE `atmgr_bugreports` (
+`bid` INT( 8 ) NOT NULL AUTO_INCREMENT ,
+`title` VARCHAR( 16 ) NOT NULL ,
+`user` VARCHAR( 32 ) NOT NULL ,
+`date` VARCHAR(16) NOT NULL ,
+`report` VARCHAR( 2048 ) NOT NULL ,
+PRIMARY KEY ( `bid` ) 
+) TYPE = MYISAM ;

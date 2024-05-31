@@ -1,0 +1,16 @@
+-- 
+-- Dumping data for table `stud_classes`
+-- 
+
+INSERT INTO `stud_classes` VALUES (1, 'S1-S2');
+INSERT INTO `stud_classes` VALUES (2, 'S3');
+INSERT INTO `stud_classes` VALUES (3, 'S4');
+INSERT INTO `stud_classes` VALUES (4, 'S5');
+INSERT INTO `stud_classes` VALUES (5, 'S6');
+INSERT INTO `stud_classes` VALUES (6, 'S7');
+INSERT INTO `stud_classes` VALUES (7, 'S8');
+
+
+
+
+INSERT INTO `user_adminn` ( `aname` , `apass` ) VALUES ('the_admin', MD5( 'atmgr-admin' ) );

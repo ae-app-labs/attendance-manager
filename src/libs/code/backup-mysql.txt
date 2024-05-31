@@ -1,0 +1,36 @@
+Execute a database backup query from PHP file
+
+Below is an example of using SELECT INTO OUTFILE query for creating table backup : 
+
+
+<?php
+include 'config.php';
+include 'opendb.php';
+
+$tableName  = 'mypet';
+$backupFile = 'backup/mypet.sql';
+$query      = "SELECT * INTO OUTFILE '$backupFile' FROM $tableName";
+$result = mysql_query($query);
+
+include 'closedb.php';
+?> 
+
+
+
+To restore the backup you just need to run LOAD DATA INFILE query like this : 
+
+
+<?php
+include 'config.php';
+include 'opendb.php';
+
+$tableName  = 'mypet';
+$backupFile = 'mypet.sql';
+$query      = "LOAD DATA INFILE 'backupFile' INTO TABLE $tableName";
+$result = mysql_query($query);
+
+include 'closedb.php';
+?> 
+
+
+It's a good idea to name the backup file as tablename.sql so you'll know from which table the backup file is

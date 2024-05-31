@@ -1,0 +1,22 @@
+/* st_style.css
+ * - styles for staff module
+ * Author : Midhun Harikumar (ae Artistik expressionz)
+ * Date   : March 2008
+ *
+ * $ revision 0.1
+ **/
+
+#staff-navigation{background-color:#f6f6f6; margin-top:5px; background-image:url(bgs/staff_nav_bg.jpg); color:#FFFFFF; background-repeat:repeat-x; font-weight:bold; padding:6px;}
+#staff-navigation a:link,#staff-navigation a:visited{ text-decoration:none; color:#FFFFFF; padding:5px;}
+#staff-navigation a:hover{background-color:#FFFFFF; color:#333333; background-image:url(bgs/staff_nav_over.jpg); background-repeat:repeat-x;}
+
+#hod-navigation{ margin-top:2px; background-color:#00CCFF; padding:6px; color:#FFFFFF; font-weight:bold; border-bottom:#003399 1px solid;}
+#hod-navigation a:link,#hod-navigation a:visited{ text-decoration:none; padding:5px; background-color:#00CCFF; color:#FFFFFF;}
+#hod-navigation a:hover{ color:#333333; background-color:#0099FF;}
+
+#staff-content{ line-height:160%;}
+#resultSpace{ padding:10px; margin-top:20px; margin-bottom:20px;}
+#frm_changePassword{ background-color:#f2f2f2; width:300px; border-bottom:#333333 2px solid; border-right:#333333 2px solid;padding:8px; margin-left:50px;}
+#f_studAttenSelect{ padding-left:10px;}
+.cleanInputBox {background-color:#FFFFFF;}
+/*#frm_changePassword input{background-color:#FFFFFF;}*/

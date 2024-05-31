@@ -1,0 +1,22 @@
+/* homepage.css
+ * - layout elements for the home page
+ * Author : Midhun Harikumar (ae Artistik expressionz)
+ * Date   : March 2008
+ *
+ * $ revision 0.1
+ **/
+
+/*-ContentBoxes-*/
+#contentbox-wrapper{ margin-top:4px;}
+.cb-style{background-image:url(img/cb_bg.jpg);background-repeat:repeat-x;float:left;height:164px;color:#FFFFFF;padding-left:5px;}
+#cb_stud0{ width:250px;text-align:center; }
+#cb_staff{ width:260px; margin-left:4px;}
+#cb_column3{ width:220px; }
+.cb-help-links a:link, .cb-help-links a:visited{ color:#FFFFFF; text-decoration:none; padding:2px;}
+.cb-help-links a:hover{ color:#006699; background-color:#FFFFFF;}
+
+#frm_staffLogin{ line-height:80%;}
+
+
+#left0-panel{ float:left; width:235px; background-color:#f7f7f7; padding:5px;}
+#right-panel{ padding:2px; margin-left:4px;}

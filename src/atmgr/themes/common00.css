@@ -1,0 +1,43 @@
+/* common00.css
+ * - Common Style sheet across environment
+ * Author : Midhun Harikumar (ae Artistik expressionz)
+ * Date   : March 2008
+ *
+ * $ revision 0.1
+ **/
+body{background-color:#f2f2f2; margin:0px; padding:0px; text-align:center; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; color:#333333}
+
+#outer-wrapper{background-color:#FFFFFF; width:750px; text-align:left; padding:2px;}
+#header{width:750px; height:139px; background-image:url(img/amgr_header.jpg); background-repeat:no-repeat; margin-bottom:4px;}
+#overviewBlock{ font-size:10px; color:#333333; background-color:#f2f2f2; padding:2px; line-height:160%;}
+
+#content-wrapper{ padding:2px;}
+#footer{ padding:4px; width:740px; background-color:#FFFFFF; border-left:#00CCFF 4px solid; text-align:left; margin-top:6px; line-height:140%; font-size:10px;}
+#error-icon{ height:120px; height:128px; background-image:url(img/error_icon.jpg); background-repeat:no-repeat;}
+
+.error00{color:#FF3300; /*font-weight:bold;*/}
+.success{color:#9900FF; /*font-weight:bold;*/}
+.item-list{ line-height:200%; margin-left:10px;}
+.emphasise{ font-weight:bold;}
+.small-heading{font-size:14px; font-weight:bold; color:#003366;}
+.small-text{font-size:10px;}
+
+.row0{}
+.row1{ background-color:#9DDFFF;}
+.attenColumn{ background-color:#CCCCCC; padding:4px;}
+
+/*-links-*/
+#top-links{ text-align:right;font-size:10px;}
+#top-links a:link, #top-links a:visited{ color:#0099FF; padding:2px;}
+#top-links a:hover{ color:#006699; text-decoration:none; background-color:#f8f8f8;}
+
+.edit-links a:link,.edit-links a:visited{ display:block; text-decoration:none; padding:2px; color:#006699; text-align:center;}
+.edit-links a:hover{ color:#FFFFFF; background-color:#003399;}
+
+.blockButton{ border-bottom:#00CCFF 1px solid; padding-bottom:5px;}
+.blockButton a:link,.blockButton a:visited{ text-decoration:none; background-color:#0075A5; color:#FFFFFF; padding:5px; border:#00CCFF 1px solid; margin-right:5px;}
+.blockButton a:hover{ background-color:#38CEFF; color:#333333;}
+
+/*-headings-*/
+h3{color:#FFFFFF; font-size:14px; font-weight:bold; margin-left:4px; text-align:left;}
+h4{color:#006666; font-size:14px;}

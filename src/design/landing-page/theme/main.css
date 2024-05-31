@@ -1,0 +1,71 @@
+/* main.css
+ * - Common Style sheet across environment
+ * Author : Midhun Harikumar (ae Artistik expressionz)
+ * Date   : March 2008
+ *
+ * $ revision 0.1
+ **/
+
+body{ 
+    background-color:#f2f2f2; 
+    margin:0px; 
+    padding:0px; 
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size:1em; 
+    color:#343434;
+}
+
+.container { 
+    max-width:720px; 
+    background-color:#FFFFFF; 
+    padding:5px;
+    margin: 0 auto;
+}
+#header{
+    height: 140px;
+    background-image:url(img/header_750x138.jpg);  
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.content{
+    display: flex;
+    gap: 2em;
+}
+.content aside {
+    font-size: 0.9em;
+    padding: 1em;
+}
+.content article {
+    padding: 1em;
+}
+#footer{ 
+    font-size:0.8em; 
+    border-left:#0099FF 2px solid; 
+    text-align:left; 
+    background-color:#FFFFFF; 
+    line-height:150%; 
+    padding:4px;
+}
+#top-links{ 
+    text-align:right;
+    font-size: 0.8em;
+}
+
+/* border-left:#006699 1px dashed;*/
+h4{ font-size:16px; color:#006666; font-weight:bold;}
+h3{ font-size:14px; color:#FFFFFF; font-weight:bold; padding-left:4px;}
+
+.box-wrapper {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+    background-image:url(img/center_box_bg.jpg); 
+    background-repeat:repeat-x; 
+}
+form{
+    color: white;
+}
